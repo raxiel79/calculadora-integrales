@@ -36,7 +36,7 @@ try:
         with col1:
             a_raw = st.text_input("Límite a:", value="0")
         with col2:
-            b_raw = st.text_input("Límite b:", value="pi")
+            b_raw = st.text_input("Límite b:", value="0")
 
         if st.button("Calcular Área"):
             # Procesamos límites con la lógica de orden que ya perfeccionamos
@@ -54,7 +54,7 @@ try:
             st.success(f"Área en el intervalo [{a}, {b}]")
             st.latex(r"\int_{" + sp.latex(a) + r"}^{" + sp.latex(b) + r"} " + sp.latex(f) + r" \, dx = " + sp.latex(resultado))
             st.write(f"**Valor decimal aproximado:** {resultado.evalf():,.2f}")
-            
+
 
 except Exception as e:
 
