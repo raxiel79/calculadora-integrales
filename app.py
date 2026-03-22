@@ -53,9 +53,9 @@ try:
             
             st.success(f"Área en el intervalo [{a}, {b}]")
             st.latex(r"\int_{" + sp.latex(a) + r"}^{" + sp.latex(b) + r"} " + sp.latex(f) + r" \, dx = " + sp.latex(resultado))
-            st.write(f"**Valor decimal aproximado:** {resultado.evalf(5)}")
+           st.write(f"**Valor decimal aproximado:** {resultado.evalf():,.4f}")
 
 except Exception as e:
 
-    
+
     st.error(f"Error en la expresión: {e}")
